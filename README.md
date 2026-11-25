@@ -1,16 +1,9 @@
 ## 📌 Project Overview & Analytical Approach
 
-Analyzed multi-year South Australia crash and casualty data in Python using statistical and visual workflows (pandas, numpy, scipy, matplotlib, seaborn). By separating incident frequency from casualty severity across time, location, road conditions, and driver behavior, the project isolates factors driving severe harm rather than just high-volume hotspots.
+Analyzed multi-year South Australia crash and casualty data in Python using statistical and visual workflows (pandas, numpy, scipy, matplotlib, seaborn).
+By separating incident frequency from casualty severity across time, location, road conditions, and driver behavior, the project isolates factors driving severe harm rather than just high-volume hotspots.
 
 ---
-## 🎯 Purpose
-
-- **Decouple Volume from Severity:** Separate high-frequency crash hotspots from high-severity conditions to identify where incidents cause disproportionate casualties across South Australia.
-- **Evaluate Multi-Factor Risk:** Isolate how time, calendar events, road infrastructure, speed zones, and driver impairment (`DUI`, `Drugs`) interact rather than relying on single-variable counts.
-- **Ensure Analytical Integrity:** Preserve missing/unknown flags explicitly and normalize by active days and casualty ratios to prevent small-sample or data-completeness bias.
-
----
-
 ## Expected Outcome
 
 - **Actionable Risk Profiles:** Clear rankings of high-volume corridors (e.g., urban 50–60 km/h carriageways and intersections) versus high-severity scenarios (e.g., unsealed roads, adverse weather, high-speed zones, and impaired driving).

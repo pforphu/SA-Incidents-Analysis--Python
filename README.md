@@ -39,7 +39,7 @@ Analyzed multi-year South Australia crash and casualty data in Python using stat
 
 ### Daily Total Units vs. Casualties Distribution
 
-<img src="Pics/Daily_Boxplot.png" width="550" alt="PL300" style="margin-left:-20px;">
+<img src="Pics/Daily_Boxplot.png" width="550" alt="Boxplot" style="margin-left:-20px;">
 
 * **Central Tendency & Spread:** Daily `Total Units` is centered around ~77 with a much wider spread (IQR ~61–92) than `Total Cas`, which sits around ~12 with a tighter range (IQR ~9–16).
 * **Skewness & Outliers:** Both metrics show right-skewed behavior with notable high-count outlier days—up to ~163 for `Total Units` and ~37 for `Total Cas`—plus a low outlier near ~9 for `Total Units`.
@@ -48,7 +48,7 @@ Analyzed multi-year South Australia crash and casualty data in Python using stat
 ---
 ### Temporal Trends: Crashes & Casualties by Year and Month
 
-<img src="Pics/TotalCrash_Year_Month.png" width="550" alt="PL300" style="margin-left:-20px;">
+<img src="Pics/TotalCrash_Year_Month.png" width="750" alt="CrashYearMonth" style="margin-left:-20px;">
 
 * **Yearly Trend (2021–2025):** Annual crashes dipped slightly in 2022 (~12,350) before rising steadily to a peak in 2025 (~13,900), while casualties stayed relatively stable around ~4,350–5,350 per year.
 * **Monthly Pattern:** Crash volume peaks in **May** (~6,100) and **March** (~6,000), and hits its lowest point in **January** (~4,750).
@@ -56,8 +56,25 @@ Analyzed multi-year South Australia crash and casualty data in Python using stat
 
 ---
 ### Temporal Patterns: Crashes & Casualties by Day of Week and Hour
-<img src="Pics/Crash_Week_Hour.png" width="550" alt="PL300" style="margin-left:-20px;">
+<img src="Pics/Crash_Week_Hour.png" width="750" alt="CRashDayHOur" style="margin-left:-20px;">
 
 * **Day of Week:** Crashes rise steadily across weekdays to peak on **Friday** (~10,900 crashes, ~3,800 casualties), then drop sharply on weekends—lowest on **Sunday** (~6,400 crashes, ~2,700 casualties).
 * **Hourly Bimodal Peaks:** Activity follows two commuter rush-hour surges—a morning peak at **8:00 AM** (~5,000 crashes) and a larger afternoon peak at **3:00 PM** (~6,100 crashes, ~2,250 casualties), with minimal volume overnight (3:00–4:00 AM).
 * **Takeaway:** Crash and casualty volumes track commuter traffic tightly, though weekends show a slightly higher casualty-to-crash proportion despite lower overall incident counts.
+
+---
+### Categorical Factors Distribution (Crash Dataset)
+<img src="Pics/Categorical_Crash_Distribution.png" width="950" alt="CRashDayHOur" style="margin-left:-20px;">
+
+* **Location & Time:** Most crashes occur in **Metropolitan** areas (79.9%, vs. 15.6% Country and 4.5% City), during **Daylight** (76.2%), and on **non-holidays** (98.0%).
+* **Road Conditions:** Incidents are heavily concentrated on **Sealed** roads (96.8%) and locations with **No Control Sign** (66.1%).
+* **Behavioral Factors:** Confirmed impairment represents a small share of total crash volume—**3.3%** involve DUI and **2.0%** involve Drugs.
+* **Takeaway:** Overall crash volume is driven by routine everyday conditions (urban, daytime, sealed roads), whereas minority segments (country roads, night, unsealed surfaces, impairment) warrant severity comparison next.
+
+---
+### Infrastructure & Environmental Impact on Road Safety
+<img src="Pics/External_Category.png" width="950" alt="CRashDayHOur" style="margin-left:-20px;">
+ 
+* **Volume vs. Severity:** Daily crashes and casualties are higher during **Daylight**, **Weekdays**, **No Holiday**, **Not Raining**, **Sealed** roads, and **No Control Sign** areas, whereas casualty ratio (`Ratio (%)`) rises noticeably on **Unsealed** roads, **Raining** weather, **Holidays**, and **Weekends**.
+* **Standout Risk:** **Unsealed** roads have very low daily crash volume (~2–3/day) but the sharpest jump in casualty ratio (~45%+), followed by **Raining** conditions (~25%).
+* **Takeaway:** High-frequency conditions drive total incident volume, while adverse road surfaces, weather, and holidays/weekends carry higher per-crash casualty severity.

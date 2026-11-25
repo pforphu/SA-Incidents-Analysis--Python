@@ -73,8 +73,34 @@ Analyzed multi-year South Australia crash and casualty data in Python using stat
 
 ---
 ### Infrastructure & Environmental Impact on Road Safety
-<img src="Pics/External_Category.png" width="950" alt="CRashDayHOur" style="margin-left:-20px;">
+<img src="Pics/External_Category.png" width="950" alt="External" style="margin-left:-20px;">
  
 * **Volume vs. Severity:** Daily crashes and casualties are higher during **Daylight**, **Weekdays**, **No Holiday**, **Not Raining**, **Sealed** roads, and **No Control Sign** areas, whereas casualty ratio (`Ratio (%)`) rises noticeably on **Unsealed** roads, **Raining** weather, **Holidays**, and **Weekends**.
 * **Standout Risk:** **Unsealed** roads have very low daily crash volume (~2–3/day) but the sharpest jump in casualty ratio (~45%+), followed by **Raining** conditions (~25%).
 * **Takeaway:** High-frequency conditions drive total incident volume, while adverse road surfaces, weather, and holidays/weekends carry higher per-crash casualty severity.
+
+---
+### Behavioral Factors Impact on Road Safety (DUI & Drugs)
+<img src="Pics/Behavioural_Cateogry.png" width="700" alt="Behaviour" style="margin-left:-20px;">
+
+
+* **Volume vs. Severity:** Crashes with **No (`N`)** DUI or drug involvement make up the vast majority of daily incidents (~35 crashes/day, ~12 casualties/day), whereas **`Y`** cases occur rarely (~1–2 crashes/day) but show a dramatically higher casualty ratio (`Ratio (%)`).
+* **Impairment Impact:** Both **DUI (`Y`)** and **Drug Influence (`Y`)** exhibit steep spikes in severity ratio compared to non-impaired crashes (`N`).
+* **Takeaway:** Impairment-related crashes are low in daily frequency but carry disproportionately high casualty severity per incident.
+
+---
+### Top High-Risk Scenarios: Objective vs. Behavioral Factors
+<img src="Pics/High_Risk_Scenerio.png" width="700" alt="Scenario" style="margin-left:-20px;">
+
+
+* **Objective Scenarios:** Highest casualty ratios occur mostly on **Unsealed** roads (peaking at **61.4%** for `Daylight | Weekend | No Holiday | No Control Sign | Unsealed`), with `Daylight | Weekend | Holiday | Control Sign | Sealed` (**53.8%**) also ranking high.
+* **Behavioral Scenarios:** Impairment combinations reach extreme casualty ratios—led by `Missing | Y` (**109.4%**) and `Y | Y` (**109.1%**), followed by `Y | Missing` (**53.7%**) and `Missing | Missing` (**34.1%**).
+* **Takeaway:** Unsealed surfaces drive top objective severity, while DUI/drug involvement—including records with missing flags—produces the highest casualty-to-crash ratios overall.
+
+---
+### Top 15 Suburbs: Crash Share vs. Casualty Volume
+<img src="Pics/Suburb_Comparision.png" width="700" alt="Scenario" style="margin-left:-20px;">
+
+* **Top Volume Leaders:** **Adelaide** leads decisively in both crash share (**3.70%**) and total casualties (**743**), followed by **Prospect** (**1.13%**, **220** casualties) and **Morphett Vale** (**0.90%**, **201** casualties).
+* **Share vs. Severity Rank Gaps:** Several suburbs generate higher relative casualty counts than their crash share rank alone suggests—such as **Morphett Vale** (**201** casualties), **North Adelaide** (**184**), **Mount Barker** (**181**), and **Sturt** (**170** vs. **136** in Wingfield).
+* **Takeaway:** Crash frequency ranking does not map one-to-one to casualty volume across suburbs, highlighting pockets where individual crashes result in higher casualty counts.

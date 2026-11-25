@@ -136,3 +136,13 @@ Analyzed multi-year South Australia crash and casualty data in Python using stat
 * **Road Group Dominance:** **Carriageway** (~32,500 crashes) and **Intersections** (~30,500 crashes) account for the vast majority of incidents and casualties, far exceeding **Freeway & Ramps** (~1,800 crashes), **Crossings** (~450), and **Other**.
 * **Linear Scaling by Control:** Across Road Group and Control combinations, total casualties scale linearly with crash volume along the regression trendline ($y = 0.36x + 41.3$), with **Intersections** clustering slightly above the line (higher casualty yield per crash) and **Freeway & Ramps** sitting slightly below.
 * **Takeaway:** Straight carriageways and intersections drive overall network volume, with intersections exhibiting slightly higher casualty intensity relative to the baseline trend.
+
+---
+## Key Challenges & Solutions
+
+- **Multi-Party Double Counting:** Joining multi-vehicle and casualty records risked inflating crash totals.
+  - **Solution:** Standardized aggregation around unique `REPORT_ID` keys and separated the full crash dataset from a dedicated casualty subset.
+- **Missing & Incomplete Data Distortion:** Dropping nulls or coercing missing `DUI`/`Drugs` flags to `0` would distort behavioral severity rates and timeline boundaries.
+  - **Solution:** Preserved `NA` dates during calendar/holiday mapping and explicitly labeled missing impairment records as `Missing`/`Unknown` during slicing.
+- **Volume Bias vs. True Severity:** Raw counts masked high-severity conditions in low-frequency segments (e.g., unsealed roads, rural zones, holidays).
+  - **Solution:** Normalized metrics by active observation days (`Crashes/Day`, `Casualties/Day`) and introduced `Casualty Ratio` with sample-size filtering (`>= 5` crashes) to isolate genuine severity drivers.

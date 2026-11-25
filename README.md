@@ -81,7 +81,7 @@ Analyzed multi-year South Australia crash and casualty data in Python using stat
 
 ---
 ### Behavioral Factors Impact on Road Safety (DUI & Drugs)
-<img src="Pics/Behavioural_Cateogry.png" width="700" alt="Behaviour" style="margin-left:-20px;">
+<img src="Pics/Behavioural_Cateogry.png" width="750" alt="Behaviour" style="margin-left:-20px;">
 
 
 * **Volume vs. Severity:** Crashes with **No (`N`)** DUI or drug involvement make up the vast majority of daily incidents (~35 crashes/day, ~12 casualties/day), whereas **`Y`** cases occur rarely (~1–2 crashes/day) but show a dramatically higher casualty ratio (`Ratio (%)`).
@@ -90,7 +90,7 @@ Analyzed multi-year South Australia crash and casualty data in Python using stat
 
 ---
 ### Top High-Risk Scenarios: Objective vs. Behavioral Factors
-<img src="Pics/High_Risk_Scenerio.png" width="700" alt="Scenario" style="margin-left:-20px;">
+<img src="Pics/High_Risk_Scenerio.png" width="800" alt="Scenario" style="margin-left:-20px;">
 
 
 * **Objective Scenarios:** Highest casualty ratios occur mostly on **Unsealed** roads (peaking at **61.4%** for `Daylight | Weekend | No Holiday | No Control Sign | Unsealed`), with `Daylight | Weekend | Holiday | Control Sign | Sealed` (**53.8%**) also ranking high.
@@ -99,8 +99,26 @@ Analyzed multi-year South Australia crash and casualty data in Python using stat
 
 ---
 ### Top 15 Suburbs: Crash Share vs. Casualty Volume
-<img src="Pics/Suburb_Comparision.png" width="700" alt="Scenario" style="margin-left:-20px;">
+<img src="Pics/Suburb_Comparision.png" width="800" alt="Scenario" style="margin-left:-20px;">
 
 * **Top Volume Leaders:** **Adelaide** leads decisively in both crash share (**3.70%**) and total casualties (**743**), followed by **Prospect** (**1.13%**, **220** casualties) and **Morphett Vale** (**0.90%**, **201** casualties).
 * **Share vs. Severity Rank Gaps:** Several suburbs generate higher relative casualty counts than their crash share rank alone suggests—such as **Morphett Vale** (**201** casualties), **North Adelaide** (**184**), **Mount Barker** (**181**), and **Sturt** (**170** vs. **136** in Wingfield).
 * **Takeaway:** Crash frequency ranking does not map one-to-one to casualty volume across suburbs, highlighting pockets where individual crashes result in higher casualty counts.
+
+---
+### Crashes vs. Casualties by Speed Zone & Control Sign
+<img src="Pics/Speed_Control.png" width="950" alt="Speed" style="margin-left:-20px;">
+
+
+* **Area Speed Distribution:** Crash and casualty volumes concentrate heavily in urban speed limits—peaking sharply at **60 km/h** (~31,000 crashes) followed by **50 km/h** (~16,900 crashes), while higher-speed zones (**80, 100, 110 km/h**) have smaller volumes but a noticeably tighter inner-to-outer bubble ratio (higher casualty severity per crash).
+* **Speed Group & Control Sign Breakdown:** Across every speed tier, **No Control Sign** segments generate more crashes than **Control Sign** segments—led by **60 to <70 [No Control Sign]** (~17,600 crashes) and **60 to <70 [Control Sign]** (~13,400 crashes), while **Above 80 [No Control Sign]** (~7,400 crashes) and **Above 80 [Control Sign]** (~950 crashes) show high casualty-to-crash overlap.
+* **Takeaway:** Urban 50–60 km/h corridors without traffic control signs account for the bulk of total incidents, whereas high-speed roads (>80 km/h) exhibit greater casualty severity per crash.
+
+---
+### Road Infrastructure Impact: Crashes vs. Casualties by Road Group & Control
+<img src="Pics/Infrastructure.png" width="950" alt="Infrastructure.png" style="margin-left:-20px;">
+
+
+* **Road Group Dominance:** **Carriageway** (~32,500 crashes) and **Intersections** (~30,500 crashes) account for the vast majority of incidents and casualties, far exceeding **Freeway & Ramps** (~1,800 crashes), **Crossings** (~450), and **Other**.
+* **Linear Scaling by Control:** Across Road Group and Control combinations, total casualties scale linearly with crash volume along the regression trendline ($y = 0.36x + 41.3$), with **Intersections** clustering slightly above the line (higher casualty yield per crash) and **Freeway & Ramps** sitting slightly below.
+* **Takeaway:** Straight carriageways and intersections drive overall network volume, with intersections exhibiting slightly higher casualty intensity relative to the baseline trend.

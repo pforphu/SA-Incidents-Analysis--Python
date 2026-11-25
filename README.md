@@ -3,6 +3,12 @@
 Analyzed multi-year South Australia crash and casualty data in Python using statistical and visual workflows (pandas, numpy, scipy, matplotlib, seaborn).
 By separating incident frequency from casualty severity across time, location, road conditions, and driver behavior, the project isolates factors driving severe harm rather than just high-volume hotspots.
 
+<p>
+<a href="https://github.com/pforphu/SA-Incidents-Analysis-2022-2026---Python/blob/main/SA%20Crash_Final.ipynb" target="_blank">
+View Project on GitHub →
+</a>
+</p>
+
 ---
 ## Expected Outcome
 
